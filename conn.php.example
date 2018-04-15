@@ -1,0 +1,32 @@
+<?php
+
+class Connection{
+    
+    protected $conn;
+
+    public function connect(){
+        $dsn = 'mysql:host=' . "localhost" .
+               ';dbname='    . "your_db_name_here" .
+               ';port='      . 3306 .
+               ';';
+               
+        $user =     "your_db_user_here";
+        $password = "your_db_password_here";
+        
+        try {
+            $this ->conn = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+            //set the PDO error mode to exception
+//             return $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//                 echo "Connected successfully"."<br>";
+            }
+        catch(PDOException $e)
+            {
+                echo "Connection failed: " . $e->getMessage()."<br>";
+            }
+                return $this->conn;
+
+    }
+
+}
+
+?>
