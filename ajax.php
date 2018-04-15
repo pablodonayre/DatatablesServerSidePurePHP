@@ -65,7 +65,6 @@
 	$keys[4][5]=$radioStatus2;
 
 	require_once "model.php";
-
 	$test = new Test();
 
 	$selector = 1;

@@ -5,12 +5,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-		<style>
-			#table1_filter{
-				display:none;
-			}
-		</style>
-    </head>
+    	<style>	#table1_filter{display:none;}</style>
+	</head>
     <body>
         <div class="container" id="">
         <br>
@@ -171,10 +167,8 @@
                      <th>Status</th>
                    </tr>
                </thead>
-
-                 <tbody>
-                 </tbody>
-
+			   <tbody>
+               </tbody>
              </table>
             </div>
          </form>
@@ -183,7 +177,6 @@
     <script>
         $(document).ready(function() {
             var oTable;
-
             /* DATATABLE-------------------------------------------*/
                 oTable = $('#table1').DataTable({
 
@@ -195,7 +188,7 @@
                     /*"pagingType": "full_numbers",*/
                     /*"pagingType": "full",*/
                     //"pagingType": "input",
-
+                    "bFilter": false,
                     "processing": true, //Feature control the processing indicator.
                     "serverSide": true, //Feature control DataTables' server-side processing mode.
 
