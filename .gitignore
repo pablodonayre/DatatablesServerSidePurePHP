@@ -1,0 +1,8 @@
+/nbproject/
+
+# To remove untracked files from the repository:
+# git rm -r --cached filename
+# git add *
+# git commit -m "fixed untracked files"
+
+conn.php
